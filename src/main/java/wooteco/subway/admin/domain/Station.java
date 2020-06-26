@@ -34,13 +34,4 @@ public class Station {
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
-
-    @Override
-    public String toString() {
-        return "Station{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", createdAt=" + createdAt +
-                '}';
-    }
 }

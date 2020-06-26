@@ -2,8 +2,8 @@ package wooteco.subway.admin.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import wooteco.subway.admin.domain.Station;
 import wooteco.subway.admin.dto.StationCreateRequest;
+import wooteco.subway.admin.dto.StationResponse;
 import wooteco.subway.admin.service.StationService;
 
 import javax.validation.Valid;
@@ -27,7 +27,7 @@ public class StationController {
     @PostMapping
     public ResponseEntity<?> createStation(
             @Valid @RequestBody StationCreateRequest stationRequest) {
-        Station persistStation = stationService.create(stationRequest.toStation());
+        StationResponse persistStation = stationService.create(stationRequest.toStation());
 
         return ResponseEntity
                 .created(URI.create("/stations/" + persistStation.getId()))

@@ -144,19 +144,4 @@ public class Line {
 
         return stationIds;
     }
-
-    @Override
-    public String toString() {
-        return "Line{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", color='" + color + '\'' +
-                ", startTime=" + startTime +
-                ", endTime=" + endTime +
-                ", intervalTime=" + intervalTime +
-                ", stations=" + stations +
-                ", createdAt=" + createdAt +
-                ", updatedAt=" + updatedAt +
-                '}';
-    }
 }

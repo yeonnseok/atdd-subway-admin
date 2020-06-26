@@ -20,6 +20,7 @@ public class StationAcceptanceTest extends AcceptanceTest {
 
         List<StationResponse> stations = getStations();
         assertThat(stations.size()).isEqualTo(4);
+        assertThat(stations.get(0).getName()).isEqualTo("잠실역");
 
         deleteStation(stations.get(0).getId());
 

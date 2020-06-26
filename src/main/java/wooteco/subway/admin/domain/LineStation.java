@@ -20,11 +20,6 @@ public class LineStation {
         this.distance = distance;
         this.duration = duration;
     }
-
-    public Long getLine() {
-        return line;
-    }
-
     public Long getPreStationId() {
         return preStationId;
     }
@@ -33,45 +28,12 @@ public class LineStation {
         return stationId;
     }
 
-    public int getDistance() {
-        return distance;
-    }
-
-    public int getDuration() {
-        return duration;
-    }
-
     public void updatePreLineStation(Long preStationId) {
         this.preStationId = preStationId;
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (o == null || getClass() != o.getClass())
-            return false;
-        LineStation that = (LineStation)o;
-        return distance == that.distance &&
-                duration == that.duration &&
-                Objects.equals(line, that.line) &&
-                Objects.equals(preStationId, that.preStationId) &&
-                Objects.equals(stationId, that.stationId);
-    }
-
-    @Override
     public int hashCode() {
         return Objects.hash(line, preStationId, stationId, distance, duration);
-    }
-
-    @Override
-    public String toString() {
-        return "LineStation{" +
-                "line=" + line +
-                ", preStationId=" + preStationId +
-                ", stationId=" + stationId +
-                ", distance=" + distance +
-                ", duration=" + duration +
-                '}';
     }
 }
